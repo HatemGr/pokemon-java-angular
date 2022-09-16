@@ -8,4 +8,4 @@ management:
 server:
   error.whitelabel.enabled: false
   servlet:
-    context-path: /pokemon
+    context-path: /
