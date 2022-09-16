@@ -1,0 +1,11 @@
+
+
+management:
+  endpoints:
+    web:
+      base-path: /
+
+server:
+  error.whitelabel.enabled: false
+  servlet:
+    context-path: /pokemon
