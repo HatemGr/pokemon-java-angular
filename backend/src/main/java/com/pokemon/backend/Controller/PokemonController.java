@@ -32,10 +32,7 @@ public class PokemonController {
   @GetMapping("/pokedex/{id}")
   public ResponseEntity<Pokemon> getOnePokemon(@PathVariable("id") int pokemonId) {
     Pokemon searchedPokemon = pokemonLibraryService.getOnePokemon(pokemonId);
-    if (searchedPokemon == null) {
-      throw new NotFoundException();
-    }
+    if (searchedPokemon == null) throw new NotFoundException();
     return new ResponseEntity<>(searchedPokemon, HttpStatus.OK);
   }
-
 }
