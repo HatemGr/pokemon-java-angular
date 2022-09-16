@@ -166,7 +166,8 @@ public class PokemonLibraryService {
   new Pokemon( 148, "dragonair", 40, 165 ),
   new Pokemon( 149, "dragonite", 22, 2100 ),
   new Pokemon( 150, "mewtwo", 20, 1220 ),
-  new Pokemon( 151, "mew", 4, 40 ));
+  new Pokemon( 151, "mew", 4, 40 )
+  );
 
   
   static{
@@ -179,6 +180,9 @@ public class PokemonLibraryService {
     .filter(pokemon -> query == null || pokemon.getName().contains(query))
     .collect(Collectors.toList());
   }
-  
+
+  public Pokemon getOnePokemon(int id) {
+    return POKEMONS.get(id);
+  }
   
 }
