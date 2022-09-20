@@ -5,6 +5,7 @@ import java.util.Collection;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -15,6 +16,7 @@ import com.pokemon.backend.Controller.exceptions.NotFoundException;
 import com.pokemon.backend.model.Pokemon;
 import com.pokemon.backend.service.PokemonLibraryService;
 
+@CrossOrigin(origins = "http://localhost:4200")
 @RestController
 @RequestMapping("/")
 public class PokemonController {
@@ -22,6 +24,7 @@ public class PokemonController {
   @Autowired
   private PokemonLibraryService pokemonLibraryService;
 
+  
   @GetMapping("/pokedex")
   public ResponseEntity<Collection<Pokemon>> getPokemons(@RequestParam(required = false) String query) {
     Collection<Pokemon> queriedPokemon = pokemonLibraryService.getAllPokemons(query);
