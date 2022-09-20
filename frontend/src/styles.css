@@ -1,1 +1,9 @@
-/* You can add global styles to this file, and also import other style files */
+@font-face {
+  font-family: "PokemonGB";
+  src: local("PokemonGB"), url("./fonts/PokemonGb-RAeo.ttf") format("truetype");
+}
+
+body {
+  font-family: "PokemonGB";
+  margin:0;
+}
