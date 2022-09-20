@@ -1,0 +1,19 @@
+<div *ngIf="pokemon" class="card">
+  <h1>{{pokemon.name}}</h1>
+  <div class="pictures">
+    <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/{{pokemon.id}}.png" alt="">
+    <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/{{pokemon.id}}.png" alt="">
+    <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/{{pokemon.id}}.png" alt="">
+    <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/shiny/{{pokemon.id}}.png"
+      alt="">
+  </div>
+  <div class="details">
+    <p>Id: {{pokemon.id}}</p>
+    <p>Height: {{pokemon.height}} cm</p>
+    <p>Weight: {{pokemon.weight}} kg</p>
+  </div>
+</div>
+
+<div class="links">
+  <a (click)="goBack" routerLink="/pokedex"> Back to Pokedex</a>
+</div>

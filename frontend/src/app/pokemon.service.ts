@@ -14,6 +14,11 @@ export class PokemonService {
     return this.http.get<Pokemon[]>(this.pokemonUrl);
   }
 
+  getPokemon(id: number): Observable<Pokemon>{
+    const url = `${this.pokemonUrl}/${id}`
+    return this.http.get<Pokemon>(url);
+  }
+
   constructor(
     private http: HttpClient,
   ) {}
