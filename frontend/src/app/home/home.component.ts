@@ -13,10 +13,7 @@ export class HomeComponent implements OnInit {
   constructor(private pokemonService: PokemonService) {}
 
   ngOnInit(): void {
-    this.getPokemons()
-    console.log(this.pokemons);
-    
-    
+    this.getPokemons()    
   }
 
   getPokemons(): void {
